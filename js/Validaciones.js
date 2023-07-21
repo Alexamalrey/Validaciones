@@ -3,9 +3,6 @@
  * Verificar que solo hay letras de la abecedario en la string(que no haya numeros ni caracteres especiales.)
  
  */
-
-
-
 /**
  * Fución para validar un texto y que no sea vacio 
  * @param {string} nombre 
@@ -59,7 +56,7 @@ console.log(validarEmail("    "))
 console.log(validarEmail(" m3ra   i9olp "))
 
 
-//validar URL
+3. //validar URL
 
 function validarurl(miurl) {
         const url = miurl.trim();//con trim elimina los espacios sobrantes delante y detras del texto
@@ -79,7 +76,7 @@ console.log(validarurl("    "))
 console.log(validarurl(" ww.lawebdelprogramador.com/codigo/JavaScript/2360-funcion-para-validar-si-una-url-es "))
 
 
-3 // Validar Fecha
+4. // Validar Fecha (Dia,mes y año)
 function validarFecha(fecha1){
         const fecha = fecha1.trim();
         const pattern = /^\d{4}([\-/. ])(0?[1-9]|1[1-2])\1(3[01]|[12][0-9]|0?[1-9])$/
@@ -98,23 +95,25 @@ function validarFecha(fecha1){
 function mirarFecha(){
         console.log(document.querySelector("[type=date]").value);
 }
-4 // Validar tiempo
-function validarTiempo(time){
-        const fecha = fecha1.trim();
-        const pattern = /^\d{4}([\-/. ])(0?[1-9]|1[1-2])\1(3[01]|[12][0-9]|0?[1-9])$/
-        if (typeof fecha !== 'string'|| fecha === "" || !pattern.test(fecha)){
- console.log("entro en el if")
-        return false
+5. // Validar tiempo(Hora)
+function validarHora(hora1){
+        const hora = hora1.trim();
+        const pattern = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/;
+        if (typeof hora !== 'string'|| hora === "" || !pattern.test(hora)){
+            console.log("entro en el if")
+            return false
         } else {
-        return true
+            return true
         }
-        }
-        console.log(validarFecha(" 2023/04/23 "))
-        console.log(validarFecha("  "))
-        console.log(validarFecha(" 09-04-2023 "))
-        document.querySelector("[type='date']");
+    }
+        console.log(validarHora(" 2023/04/09 "))
+        console.log(validarHora("  "))
+        console.log(validarHora(" 09/04/2023 "))
 
-5 // Validar Fecha de control
+
+5 // Validar fecha control
+
+
 6 // Validar mes
 7 // Vlidar semana
 8 // Validar Numero
